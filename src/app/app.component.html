@@ -1,0 +1,10 @@
+<button (click)="increase()">+1</button>
+<button 
+(click)="decrease()"
+[disabled]="cannotDecrease$ | async">-1</button>
+<button 
+(click)="clear()"
+[disabled]="cannotDecrease$ | async">0</button>
+
+<p>Счетчик = {{count$ | async}}</p>
+<p *ngIf="updatedAt"> Обновлялось {{ updatedAt | date: "HH:mm:ss dd/MM/yyyy"}}</p>
